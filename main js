@@ -4,7 +4,7 @@
    ============================================================ */
 
 // ── CONFIGURATION — change phone number here only ──────────
-const WA_NUMBER = '917734993391'; // Format: country code + number, no + or spaces
+const WA_NUMBER = '919999999999'; // Format: country code + number, no + or spaces
 const WA_DEFAULT_MSG = 'Hello, I am interested in your export products. Please share details.';
 
 // ── Build a WhatsApp URL ────────────────────────────────────
