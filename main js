@@ -1,0 +1,169 @@
+/* ============================================================
+   BHARAT TRADELINK — main.js  (v2)
+   WhatsApp lead generation + all site interactions
+   ============================================================ */
+
+// ── CONFIGURATION — change phone number here only ──────────
+const WA_NUMBER = '917734993391'; // Format: country code + number, no + or spaces
+const WA_DEFAULT_MSG = 'Hello, I am interested in your export products. Please share details.';
+
+// ── Build a WhatsApp URL ────────────────────────────────────
+function waURL(msg) {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+// ── Open WhatsApp ───────────────────────────────────────────
+function openWhatsApp(msg) {
+  window.open(waURL(msg || WA_DEFAULT_MSG), '_blank');
+}
+
+// ============================================================
+// 1. FLOATING WHATSAPP BUTTON
+// ============================================================
+function injectFloatingWA() {
+  const div = document.createElement('div');
+  div.className = 'wa-float';
+  div.innerHTML = `
+    <span class="wa-tooltip">💬 Chat with us on WhatsApp</span>
+    <a class="wa-float-btn" href="${waURL(WA_DEFAULT_MSG)}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12.004 2C6.477 2 2 6.477 2 12.004c0 1.773.46 3.44 1.268 4.892L2 22l5.232-1.227A9.978 9.978 0 0012.004 22C17.527 22 22 17.523 22 12.004 22 6.477 17.527 2 12.004 2zm0 18.197a8.177 8.177 0 01-4.192-1.152l-.3-.179-3.104.727.748-3.023-.196-.31A8.177 8.177 0 013.826 12.004C3.826 7.483 7.483 3.826 12.004 3.826c4.517 0 8.174 3.657 8.174 8.178 0 4.52-3.657 8.193-8.174 8.193z"/>
+      </svg>
+    </a>`;
+  document.body.appendChild(div);
+}
+
+// ============================================================
+// 2. PRODUCT-SPECIFIC WHATSAPP INQUIRY BUTTONS
+// ============================================================
+function attachProductWAButtons() {
+  // data-wa-product attribute on any element triggers product-specific WA message
+  document.querySelectorAll('[data-wa-product]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const product = this.dataset.waProduct;
+      const msg = `Hello, I am interested in *${product}* from Bharat TradeLink. Please share the price, MOQ, and export details.`;
+      openWhatsApp(msg);
+    });
+  });
+}
+
+// ============================================================
+// 3. CONTACT / INQUIRY FORM → WHATSAPP REDIRECT
+// ============================================================
+function attachFormWARedirect() {
+  document.querySelectorAll('.js-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      // Gather field values
+      const name    = (form.querySelector('[name="name"], input[placeholder*="Name"], input[placeholder*="name"]') || {}).value || '';
+      const email   = (form.querySelector('[name="email"], input[type="email"]') || {}).value || '';
+      const country = (form.querySelector('[name="country"], select') || {}).value || '';
+      const product = (form.querySelector('[name="product"], select') ? [...form.querySelectorAll('select')].find(s => s.name === 'product' || s.id === 'product') : null)?.value || '';
+      const message = (form.querySelector('textarea') || {}).value || '';
+
+      // Build smart WA message
+      let waMsg = `Hello Bharat TradeLink! 🇮🇳\n\n`;
+      if (name)    waMsg += `*Name:* ${name}\n`;
+      if (email)   waMsg += `*Email:* ${email}\n`;
+      if (country) waMsg += `*Country:* ${country}\n`;
+      if (product) waMsg += `*Product Interest:* ${product}\n`;
+      if (message) waMsg += `\n*Message:*\n${message}`;
+      waMsg += `\n\nPlease share details and pricing.`;
+
+      setTimeout(() => {
+        // Show success message if element exists
+        const successEl = form.querySelector('.success-msg') || document.getElementById('successMsg');
+        if (successEl) {
+          successEl.style.display = 'block';
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.reset();
+        btn.textContent = originalText;
+        btn.disabled = false;
+
+        // Open WhatsApp with form data
+        setTimeout(() => openWhatsApp(waMsg), 600);
+      }, 1000);
+    });
+  });
+}
+
+// ============================================================
+// 4. NAVBAR — sticky shadow + hamburger
+// ============================================================
+function initNavbar() {
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  }
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  }
+}
+
+// ============================================================
+// 5. SCROLL ANIMATIONS (Intersection Observer)
+// ============================================================
+function initFadeUp() {
+  const els = document.querySelectorAll('.fade-up');
+  if (!els.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+}
+
+// ============================================================
+// 6. PRODUCT FILTER (products page)
+// ============================================================
+function initProductFilter() {
+  const btns  = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.prod-card');
+  if (!btns.length || !cards.length) return;
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => { c.style.display = (f === 'all' || c.dataset.category === f) ? '' : 'none'; });
+    });
+  });
+}
+
+// ============================================================
+// 7. SMOOTH ANCHOR SCROLLING
+// ============================================================
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+}
+
+// ============================================================
+// INIT — run everything on DOMContentLoaded
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  injectFloatingWA();
+  attachProductWAButtons();
+  attachFormWARedirect();
+  initNavbar();
+  initFadeUp();
+  initProductFilter();
+  initSmoothScroll();
+});
