@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bharat TradeLink – Export quality products from India to international buyers worldwide. Metals, Spices, Chemicals, Textiles and more." />
+  <meta name="keywords" content="export from India, Indian products, turmeric export, steel export, spice suppliers India, buy from India" />
   <title>Bharat TradeLink | Export Quality Products from India Worldwide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -11,14 +12,21 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="logo">
       <span class="logo-icon">🌐</span>
       <span>Bharat <strong>TradeLink</strong></span>
     </a>
+
+    <!-- WhatsApp in navbar -->
+    <a href="https://wa.me/919999999999" target="_blank" class="nav-wa">
+      💬 +91 99999 99999
+    </a>
+
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="products.html">Products</a></li>
@@ -31,46 +39,157 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-content fade-in">
-    <span class="hero-badge">🇮🇳 Proudly Made in India</span>
-    <h1>Export Quality Products<br /><em>from India, Worldwide</em></h1>
-    <p class="hero-sub">Connect with verified Indian suppliers across metals, spices, chemicals, textiles and more. Your trusted bridge to global markets.</p>
-    <div class="hero-cta">
-      <a href="inquiry.html" class="btn-primary">Send Inquiry</a>
-      <a href="products.html" class="btn-outline">Browse Products</a>
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<div class="hero-wrapper">
+  <div class="hero">
+    <div class="hero-content fade-in">
+      <span class="hero-badge">🇮🇳 Proudly Made in India</span>
+      <h1>Export Quality Products<br /><em>from India, Worldwide</em></h1>
+      <p class="hero-sub">Connect with verified Indian suppliers across metals, spices, chemicals, textiles and more. Your trusted bridge to global markets.</p>
+      <div class="hero-cta">
+        <a href="inquiry.html" class="btn-primary">📋 Send Inquiry</a>
+        <button class="btn-whatsapp" data-wa-product="Export Products" onclick="openWhatsApp('Hello! I am interested in importing products from India via Bharat TradeLink. Please share your product catalog.')">
+          💬 WhatsApp Us
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>50+</strong><span>Countries Served</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>200+</strong><span>Verified Suppliers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>1000+</strong><span>Products Listed</span></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><strong>50+</strong><span>Countries Served</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><strong>200+</strong><span>Verified Suppliers</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><strong>1000+</strong><span>Products Listed</span></div>
+
+    <div class="hero-visual fade-in-right">
+      <div class="globe-card">
+        <div class="globe-ring ring1"></div>
+        <div class="globe-ring ring2"></div>
+        <div class="globe-ring ring3"></div>
+        <div class="globe-center">🌏</div>
+        <div class="floating-chip chip1">📦 Metals</div>
+        <div class="floating-chip chip2">🌶️ Spices</div>
+        <div class="floating-chip chip3">🧵 Textiles</div>
+        <div class="floating-chip chip4">⚗️ Chemicals</div>
+      </div>
     </div>
   </div>
-  <div class="hero-visual fade-in-right">
-    <div class="globe-card">
-      <div class="globe-ring ring1"></div>
-      <div class="globe-ring ring2"></div>
-      <div class="globe-ring ring3"></div>
-      <div class="globe-center">🌏</div>
-      <div class="floating-chip chip1">📦 Metals</div>
-      <div class="floating-chip chip2">🌶️ Spices</div>
-      <div class="floating-chip chip3">🧵 Textiles</div>
-      <div class="floating-chip chip4">⚗️ Chemicals</div>
+</div>
+
+<!-- ══ 8 EXPORT PRODUCTS ════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Our Products</span>
+      <h2>Top Indian Export Products</h2>
+      <p>Premium quality goods sourced directly from verified Indian manufacturers — ready to ship worldwide</p>
+    </div>
+
+    <div class="hp-products-grid">
+
+      <!-- 1. Turmeric -->
+      <div class="hp-prod-card fade-up">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#fff8e1,#ffe082);">🟡</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Spices</span>
+          <h3>Turmeric Powder</h3>
+          <p>Premium Lakadong & Erode turmeric with high curcumin content (5–7%). FSSAI, USFDA & EU certified.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Turmeric Powder">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 2. Cumin Seeds -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.07s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">🫙</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Spices</span>
+          <h3>Cumin Seeds (Jeera)</h3>
+          <p>Machine-cleaned cumin from Rajasthan & Gujarat. Consistent quality, ideal for food processing and retail.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Cumin Seeds (Jeera)">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 3. Basmati Rice -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.14s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#f9fbe7,#f0f4c3);">🍚</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Agri</span>
+          <h3>Basmati Rice</h3>
+          <p>Long-grain 1121 & traditional Basmati from Punjab & Haryana. APEDA registered, available in bulk & consumer packs.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Basmati Rice">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 4. Aluminum Scrap -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.21s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#eceff1,#cfd8dc);">🔩</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Metals</span>
+          <h3>Aluminum Scrap</h3>
+          <p>Grade A aluminum scrap and profiles sourced from certified Indian recyclers. Available in 20–100 MT shipments.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Aluminum Scrap">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 5. Steel Rods -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.07s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">⚙️</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Metals</span>
+          <h3>Steel Rods & Bars</h3>
+          <p>TMT, mild steel, and stainless steel rods from IS:1786 certified mills. Used in construction and fabrication.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Steel Rods & Bars">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 6. Cotton Bedsheets -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.14s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">🛏️</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Textiles</span>
+          <h3>Cotton Bedsheets</h3>
+          <p>200–400 thread count 100% cotton bedsheets from Panipat. OCS certified, custom sizes and prints available.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Cotton Bedsheets">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 7. Herbal Oil -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.21s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🌿</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Wellness</span>
+          <h3>Herbal & Essential Oils</h3>
+          <p>Cold-pressed castor, neem, and essential oils for cosmetics and pharma. GMP certified, COSMOS-approved suppliers.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Herbal & Essential Oils">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- 8. Handicrafts -->
+      <div class="hp-prod-card fade-up" style="animation-delay:.28s">
+        <div class="hp-prod-img" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">🏺</div>
+        <div class="hp-prod-body">
+          <span class="hp-prod-tag">Handicrafts</span>
+          <h3>Indian Handicrafts</h3>
+          <p>Handmade wooden, brass, and ceramic handicrafts from Rajasthan & UP. Ideal for home décor and gifting markets.</p>
+          <button class="btn-wa-inquiry" data-wa-product="Indian Handicrafts">💬 Inquire on WhatsApp</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="products.html" class="btn-primary">View All Products</a>
     </div>
   </div>
 </section>
 
-<!-- FEATURED PRODUCTS -->
-<section class="section" id="products">
+<!-- ══ FEATURED CATEGORIES ═══════════════════════════════════ -->
+<section class="section section-light">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-tag">Our Portfolio</span>
-      <h2>Featured Product Categories</h2>
-      <p>Premium Indian goods ready for global export</p>
+      <h2>Product Categories</h2>
+      <p>Four major export verticals — hundreds of sub-categories available</p>
     </div>
     <div class="product-grid">
       <div class="product-card fade-up">
@@ -98,13 +217,10 @@
         <a href="products.html#textiles" class="btn-card">Explore →</a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:2.5rem;">
-      <a href="products.html" class="btn-primary">View All Products</a>
-    </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- ══ WHY CHOOSE US ══════════════════════════════════════════ -->
 <section class="section section-blue">
   <div class="container">
     <div class="section-header fade-up">
@@ -113,42 +229,18 @@
       <p style="color:rgba(255,255,255,.75);">We simplify global trade so you can focus on growing your business</p>
     </div>
     <div class="why-grid">
-      <div class="why-card fade-up">
-        <div class="why-icon">✅</div>
-        <h3>Verified Suppliers</h3>
-        <p>Every supplier undergoes strict KYC, factory audits, and quality verification before listing.</p>
-      </div>
-      <div class="why-card fade-up" style="animation-delay:.1s">
-        <div class="why-icon">📜</div>
-        <h3>Documentation Support</h3>
-        <p>We handle export documentation, customs, and compliance paperwork end-to-end.</p>
-      </div>
-      <div class="why-card fade-up" style="animation-delay:.2s">
-        <div class="why-icon">🚢</div>
-        <h3>Reliable Logistics</h3>
-        <p>Tie-ups with top freight forwarders for sea, air, and multi-modal transport globally.</p>
-      </div>
-      <div class="why-card fade-up" style="animation-delay:.3s">
-        <div class="why-icon">💰</div>
-        <h3>Competitive Pricing</h3>
-        <p>Direct factory-to-buyer model eliminates middlemen, ensuring the best FOB/CIF rates.</p>
-      </div>
-      <div class="why-card fade-up" style="animation-delay:.4s">
-        <div class="why-icon">🔒</div>
-        <h3>Secure Payments</h3>
-        <p>LC, TT, and escrow payment options to protect both buyers and sellers.</p>
-      </div>
-      <div class="why-card fade-up" style="animation-delay:.5s">
-        <div class="why-icon">🌍</div>
-        <h3>Global Reach</h3>
-        <p>Active buyers in 50+ countries across Europe, Americas, Middle East, and Southeast Asia.</p>
-      </div>
+      <div class="why-card fade-up"><div class="why-icon">✅</div><h3>Verified Suppliers</h3><p>Every supplier undergoes strict KYC, factory audits, and quality verification before listing.</p></div>
+      <div class="why-card fade-up" style="animation-delay:.1s"><div class="why-icon">📜</div><h3>Documentation Support</h3><p>We handle export documentation, customs, and compliance paperwork end-to-end.</p></div>
+      <div class="why-card fade-up" style="animation-delay:.2s"><div class="why-icon">🚢</div><h3>Reliable Logistics</h3><p>Tie-ups with top freight forwarders for sea, air, and multi-modal transport globally.</p></div>
+      <div class="why-card fade-up" style="animation-delay:.3s"><div class="why-icon">💰</div><h3>Competitive Pricing</h3><p>Direct factory-to-buyer model eliminates middlemen, ensuring the best FOB/CIF rates.</p></div>
+      <div class="why-card fade-up" style="animation-delay:.4s"><div class="why-icon">🔒</div><h3>Secure Payments</h3><p>LC, TT, and escrow payment options to protect both buyers and sellers.</p></div>
+      <div class="why-card fade-up" style="animation-delay:.5s"><div class="why-icon">🌍</div><h3>Global Reach</h3><p>Active buyers in 50+ countries across Europe, Americas, Middle East, and Southeast Asia.</p></div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section">
+<!-- ══ HOW IT WORKS ═══════════════════════════════════════════ -->
+<section class="section section-white">
   <div class="container">
     <div class="section-header fade-up">
       <span class="section-tag">Simple Process</span>
@@ -159,7 +251,7 @@
       <div class="step fade-up">
         <div class="step-num">01</div>
         <h3>Send an Inquiry</h3>
-        <p>Fill our quick inquiry form with your product requirements, quantity, and destination country.</p>
+        <p>Fill our quick form or WhatsApp us with your product requirements, quantity, and destination.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step fade-up" style="animation-delay:.15s">
@@ -177,16 +269,17 @@
       <div class="step fade-up" style="animation-delay:.45s">
         <div class="step-num">04</div>
         <h3>Ship & Receive</h3>
-        <p>We coordinate shipping, documentation, and customs clearance. You receive your goods on time.</p>
+        <p>We coordinate shipping, documentation, and customs clearance. Goods arrive on time.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:3rem;">
-      <a href="inquiry.html" class="btn-primary">Start Your Inquiry Now</a>
+      <a href="inquiry.html" class="btn-primary" style="margin-right:.75rem;">📋 Start Inquiry</a>
+      <button class="btn-whatsapp" onclick="openWhatsApp('Hello! I want to know more about how Bharat TradeLink works. Can you guide me?')">💬 Ask on WhatsApp</button>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ══ TESTIMONIALS ═══════════════════════════════════════════ -->
 <section class="section section-light">
   <div class="container">
     <div class="section-header fade-up">
@@ -197,32 +290,43 @@
       <div class="testimonial-card fade-up">
         <div class="stars">★★★★★</div>
         <p>"Bharat TradeLink helped us source high-quality turmeric at competitive prices. Documentation was flawless and shipment arrived on schedule."</p>
-        <div class="testimonial-author">
-          <div class="avatar">MR</div>
-          <div><strong>Mohammed R.</strong><br /><small>Buyer, UAE</small></div>
-        </div>
+        <div class="testimonial-author"><div class="avatar">MR</div><div><strong>Mohammed R.</strong><br /><small>Buyer, UAE</small></div></div>
       </div>
       <div class="testimonial-card fade-up" style="animation-delay:.1s">
         <div class="stars">★★★★★</div>
         <p>"We've been sourcing stainless steel sheets through BTL for 2 years. Their supplier verification process gives us complete confidence."</p>
-        <div class="testimonial-author">
-          <div class="avatar">KL</div>
-          <div><strong>Klaus L.</strong><br /><small>Manufacturer, Germany</small></div>
-        </div>
+        <div class="testimonial-author"><div class="avatar">KL</div><div><strong>Klaus L.</strong><br /><small>Manufacturer, Germany</small></div></div>
       </div>
       <div class="testimonial-card fade-up" style="animation-delay:.2s">
         <div class="stars">★★★★★</div>
         <p>"Excellent service! Their team handled all the paperwork and logistics. Highly recommend for any business looking to import from India."</p>
-        <div class="testimonial-author">
-          <div class="avatar">SP</div>
-          <div><strong>Sarah P.</strong><br /><small>Retailer, Canada</small></div>
-        </div>
+        <div class="testimonial-author"><div class="avatar">SP</div><div><strong>Sarah P.</strong><br /><small>Retailer, Canada</small></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
+<!-- ══ WHATSAPP CTA SECTION ═══════════════════════════════════ -->
+<section class="wa-cta-section">
+  <div class="container">
+    <div class="wa-cta-inner fade-up">
+      <span class="wa-icon-big">💬</span>
+      <h2>Chat with Us Directly on WhatsApp</h2>
+      <p>Get instant answers on pricing, availability, and shipping. Our trade experts respond within 2 hours — Monday to Saturday.</p>
+      <div class="wa-cta-buttons">
+        <button class="btn-whatsapp" onclick="openWhatsApp('Hello Bharat TradeLink! I want to chat about importing products from India. Please guide me.')">
+          💬 Start WhatsApp Chat
+        </button>
+        <a href="inquiry.html" class="btn-outline">📋 Or Send a Formal Inquiry</a>
+      </div>
+      <p style="color:rgba(255,255,255,.55);font-size:.82rem;margin-top:1.25rem;">
+        📞 +91 99999 99999 &nbsp;|&nbsp; 📧 info@bharattradelink.com &nbsp;|&nbsp; 🕐 Mon–Sat, 9AM–6PM IST
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ════════════════════════════════════════════ -->
 <section class="cta-banner">
   <div class="container">
     <div class="cta-inner fade-up">
@@ -230,19 +334,23 @@
       <p>Send us your requirements and get matched with verified suppliers within 24 hours.</p>
       <div class="cta-buttons">
         <a href="inquiry.html" class="btn-primary">Send Inquiry</a>
-        <a href="https://wa.me/919999999999" class="btn-whatsapp" target="_blank">💬 WhatsApp Us</a>
+        <button class="btn-whatsapp" onclick="openWhatsApp('Hello! I want to import products from India. Please help me get started.')">💬 WhatsApp Us</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom:1rem;font-size:1.2rem;">🌐 Bharat <strong>TradeLink</strong></div>
+        <div class="logo">🌐 Bharat <strong>TradeLink</strong></div>
         <p>Your trusted Indian export partner. Connecting verified suppliers with global buyers since 2018.</p>
+        <!-- WhatsApp in footer -->
+        <a href="https://wa.me/919999999999" target="_blank" class="footer-wa">
+          💬 WhatsApp: +91 99999 99999
+        </a>
         <div class="social-links">
           <a href="#">LinkedIn</a>
           <a href="#">Twitter</a>
@@ -271,7 +379,7 @@
         <ul>
           <li>📧 info@bharattradelink.com</li>
           <li>📞 +91 99999 99999</li>
-          <li>💬 WhatsApp: +91 99999 99999</li>
+          <li><a href="https://wa.me/919999999999" target="_blank" style="color:#25d366;">💬 WhatsApp Us</a></li>
           <li>📍 Mumbai, Maharashtra, India</li>
         </ul>
       </div>
