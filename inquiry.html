@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Send a product inquiry to Bharat TradeLink. Get matched with verified Indian exporters within 24 hours." />
+  <title>Send Inquiry | Bharat TradeLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🌐</span><span>Bharat <strong>TradeLink</strong></span></a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="supplier.html">Join as Supplier</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="inquiry.html" class="btn-nav active">Send Inquiry</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Send an Inquiry</h1>
+    <p>Tell us what you need — we'll match you with verified Indian suppliers within 24 hours</p>
+  </div>
+</div>
+
+<section class="form-section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:3rem;align-items:start;max-width:1000px;margin:0 auto;">
+
+      <!-- FORM -->
+      <div class="form-wrap fade-up">
+        <h2>Product Inquiry Form</h2>
+        <p class="form-sub">Fill in your details and we'll get back to you with matching suppliers and quotes.</p>
+
+        <div class="success-msg" id="successMsg">✅ Thank you! Your inquiry has been received. We'll contact you within 24 hours.</div>
+
+        <form class="js-form" id="inquiryForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Acme Corp" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option>United States</option><option>United Kingdom</option><option>Germany</option>
+                <option>France</option><option>UAE</option><option>Saudi Arabia</option>
+                <option>Australia</option><option>Canada</option><option>Singapore</option>
+                <option>Japan</option><option>South Korea</option><option>Brazil</option>
+                <option>South Africa</option><option>Nigeria</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="product">Product Interest *</label>
+              <select id="product" name="product" required>
+                <option value="">Select category</option>
+                <option>Metals & Alloys</option>
+                <option>Spices & Herbs</option>
+                <option>Chemicals</option>
+                <option>Textiles & Fabrics</option>
+                <option>Other / Custom</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="product-detail">Specific Product / Specification</label>
+            <input type="text" id="product-detail" name="product-detail" placeholder="e.g. Stainless Steel 304 Sheets, 2mm thickness" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantity">Quantity Required</label>
+              <input type="text" id="quantity" name="quantity" placeholder="e.g. 5 MT per month" />
+            </div>
+            <div class="form-group">
+              <label for="incoterm">Preferred Incoterm</label>
+              <select id="incoterm" name="incoterm">
+                <option value="">Select incoterm</option>
+                <option>FOB</option><option>CIF</option><option>CFR</option><option>EXW</option><option>DDP</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Requirements / Message *</label>
+            <textarea id="message" name="message" placeholder="Please describe your requirements, certifications needed, delivery timeline, or any other details…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit">Submit Inquiry</button>
+        </form>
+
+        <div class="form-divider">or contact us directly</div>
+        <a href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20inquire%20about%20products%20from%20Bharat%20TradeLink" target="_blank" class="btn-whatsapp whatsapp-full">💬 Chat on WhatsApp</a>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="fade-up" style="animation-delay:.15s">
+        <div style="background:var(--blue);color:#fff;border-radius:var(--radius);padding:1.75rem;margin-bottom:1.5rem;">
+          <h3 style="font-family:var(--font-display);margin-bottom:1rem;">Why Send an Inquiry?</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;">
+            <li style="display:flex;gap:.75rem;align-items:flex-start;"><span>⚡</span><span>Response within 24 hours</span></li>
+            <li style="display:flex;gap:.75rem;align-items:flex-start;"><span>✅</span><span>Matched with 2–3 verified suppliers</span></li>
+            <li style="display:flex;gap:.75rem;align-items:flex-start;"><span>💰</span><span>Competitive FOB/CIF pricing</span></li>
+            <li style="display:flex;gap:.75rem;align-items:flex-start;"><span>📜</span><span>Full export documentation support</span></li>
+            <li style="display:flex;gap:.75rem;align-items:flex-start;"><span>🔒</span><span>No commitment, 100% free inquiry</span></li>
+          </ul>
+        </div>
+
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;">
+          <h4 style="font-family:var(--font-display);margin-bottom:.75rem;">Contact Us Directly</h4>
+          <div style="display:flex;flex-direction:column;gap:.85rem;font-size:.9rem;color:var(--text-muted);">
+            <div>📧 <a href="mailto:info@bharattradelink.com" style="color:var(--blue);">info@bharattradelink.com</a></div>
+            <div>📞 <a href="tel:+919999999999" style="color:var(--blue);">+91 99999 99999</a></div>
+            <div>💬 <a href="https://wa.me/919999999999" target="_blank" style="color:#25d366;">WhatsApp: +91 99999 99999</a></div>
+            <div>📍 Mumbai, Maharashtra, India</div>
+            <div>🕐 Mon–Sat, 9 AM – 6 PM IST</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo" style="margin-bottom:1rem;font-size:1.2rem;">🌐 Bharat <strong>TradeLink</strong></div><p>Your trusted Indian export partner.</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="inquiry.html">Send Inquiry</a></li><li><a href="supplier.html">Supplier Registration</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>📧 info@bharattradelink.com</li><li>📞 +91 99999 99999</li><li>📍 Mumbai, India</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Bharat TradeLink.</p><p>Designed with ❤️ in India</p></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<style>
+  @media (max-width: 760px) {
+    div[style*="grid-template-columns:1fr 340px"] { grid-template-columns: 1fr !important; }
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Register as a verified Indian supplier on Bharat TradeLink and reach international buyers in 50+ countries." />
+  <title>Supplier Registration | Bharat TradeLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🌐</span><span>Bharat <strong>TradeLink</strong></span></a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="supplier.html" class="active">Join as Supplier</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="inquiry.html" class="btn-nav">Send Inquiry</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Join as a Verified Supplier</h1>
+    <p>Reach international buyers in 50+ countries — grow your export business with Bharat TradeLink</p>
+  </div>
+</div>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Benefits</span>
+      <h2>Why Register with Us?</h2>
+    </div>
+    <div class="supplier-benefits fade-up">
+      <div class="benefit-card">
+        <h3>🌍 Global Exposure</h3>
+        <p>Your products listed in front of active buyers from USA, UK, Europe, UAE, and Southeast Asia.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>🔒 Verified Badge</h3>
+        <p>Our "Verified Supplier" badge increases buyer trust and conversion rates significantly.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>📦 Export Support</h3>
+        <p>We handle inquiry coordination, export documentation, and logistics support for all orders.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>💼 Zero Commission</h3>
+        <p>Pay only a one-time listing fee. No hidden commissions or revenue sharing on your orders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="container">
+    <div class="form-wrap fade-up" style="max-width:720px;margin:0 auto;">
+      <h2>Supplier Registration Form</h2>
+      <p class="form-sub">Complete the form below. Our team will review your application within 2 business days.</p>
+
+      <div class="success-msg" id="successMsg">✅ Registration submitted! Our team will contact you within 2 business days for verification.</div>
+
+      <form class="js-form" novalidate>
+
+        <h4 style="font-family:var(--font-display);margin:1.5rem 0 1rem;border-bottom:1px solid var(--border);padding-bottom:.5rem;">Company Information</h4>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Company Name *</label>
+            <input type="text" placeholder="Your Company Pvt. Ltd." required />
+          </div>
+          <div class="form-group">
+            <label>Year of Establishment</label>
+            <input type="number" placeholder="2005" min="1900" max="2025" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Contact Person Name *</label>
+            <input type="text" placeholder="Mr. Rajesh Kumar" required />
+          </div>
+          <div class="form-group">
+            <label>Designation</label>
+            <input type="text" placeholder="Export Manager" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Business Email *</label>
+            <input type="email" placeholder="exports@yourcompany.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp *</label>
+            <input type="tel" placeholder="+91 98765 43210" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Company Address *</label>
+          <input type="text" placeholder="Full address including city, state, PIN" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>State</label>
+            <select>
+              <option value="">Select state</option>
+              <option>Maharashtra</option><option>Gujarat</option><option>Rajasthan</option>
+              <option>Tamil Nadu</option><option>Karnataka</option><option>Uttar Pradesh</option>
+              <option>West Bengal</option><option>Andhra Pradesh</option><option>Telangana</option>
+              <option>Punjab</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>GST Number</label>
+            <input type="text" placeholder="27AAACC1206D1ZM" />
+          </div>
+        </div>
+
+        <h4 style="font-family:var(--font-display);margin:1.5rem 0 1rem;border-bottom:1px solid var(--border);padding-bottom:.5rem;">Export Details</h4>
+
+        <div class="form-group">
+          <label>IEC (Import Export Code) *</label>
+          <input type="text" placeholder="XXXXXXXXXX" required />
+        </div>
+
+        <div class="form-group">
+          <label>Product Categories *</label>
+          <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.25rem;">
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;"><input type="checkbox" name="cat" value="metals" /> Metals & Alloys</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;"><input type="checkbox" name="cat" value="spices" /> Spices & Herbs</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;"><input type="checkbox" name="cat" value="chemicals" /> Chemicals</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;"><input type="checkbox" name="cat" value="textiles" /> Textiles</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;"><input type="checkbox" name="cat" value="other" /> Other</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Main Products (list your top 3–5)</label>
+          <textarea placeholder="e.g.&#10;1. Stainless Steel Sheets (304/316)&#10;2. Copper Wire Rods&#10;3. Aluminum Profiles"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Annual Export Turnover</label>
+            <select>
+              <option value="">Select range</option>
+              <option>Below ₹50 Lakhs</option>
+              <option>₹50L – ₹1 Crore</option>
+              <option>₹1Cr – ₹5 Crore</option>
+              <option>₹5Cr – ₹25 Crore</option>
+              <option>Above ₹25 Crore</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Countries You Currently Export To</label>
+            <input type="text" placeholder="UAE, UK, USA, Germany" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Quality Certifications</label>
+          <input type="text" placeholder="ISO 9001, CE, FSSAI, USFDA, BIS, etc." />
+        </div>
+
+        <div class="form-group">
+          <label>Website (if any)</label>
+          <input type="url" placeholder="https://www.yourcompany.com" />
+        </div>
+
+        <div class="form-group">
+          <label>How did you hear about us?</label>
+          <select>
+            <option value="">Select</option>
+            <option>Google Search</option><option>Social Media</option><option>Word of Mouth</option>
+            <option>Trade Fair</option><option>Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary form-submit" style="margin-top:.5rem;">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo" style="margin-bottom:1rem;font-size:1.2rem;">🌐 Bharat <strong>TradeLink</strong></div><p>Your trusted Indian export partner.</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="inquiry.html">Send Inquiry</a></li><li><a href="supplier.html">Supplier Registration</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li>📧 info@bharattradelink.com</li><li>📞 +91 99999 99999</li><li>📍 Mumbai, India</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Bharat TradeLink.</p><p>Designed with ❤️ in India</p></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
